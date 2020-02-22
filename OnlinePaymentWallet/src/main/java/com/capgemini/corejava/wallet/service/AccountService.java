@@ -1,8 +1,6 @@
-package corejava.onlinewallet.OnlinePaymentWalletService;
+package com.capgemini.corejava.wallet.service;
 
-import corejava.onlinewallet.OnlinePaymentWalletBean.Model;
-
-//import com.capgemini.corejava.wallet.Model;
+import com.capgemini.corejava.wallet.model.Model;
 
 public interface AccountService {
 	int getLoginDetails(int userId);

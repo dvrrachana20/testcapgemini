@@ -1,8 +1,7 @@
-package corejava.onlinewallet.OnlinePaymentWalletDAO;
 
-import corejava.onlinewallet.OnlinePaymentWalletBean.Model;
+package com.capgemini.corejava.wallet.dao;
 
-//import com.capgemini.corejava.wallet.Model;
+import com.capgemini.corejava.wallet.model.Model;
 
 public interface AccountDao {
 	int getLoginDetails(int userId);

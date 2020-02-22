@@ -1,13 +1,12 @@
-package corejava.onlinewallet.OnlinePaymentWallet;
-
+package com.capgemini.corejava.wallet.mainui;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
-import corejava.onlinewallet.OnlinePaymentWalletBean.Model;
-import corejava.onlinewallet.OnlinePaymentWalletDAO.AccountDaoImp1;
-import corejava.onlinewallet.OnlinePaymentWalletException.WalletNoException;
-import corejava.onlinewallet.OnlinePaymentWalletService.AccountServiceImp1;
+import com.capgemini.corejava.wallet.dao.AccountDaoImp1;
+import com.capgemini.corejava.wallet.exception.WalletNoException;
+import com.capgemini.corejava.wallet.model.Model;
+import com.capgemini.corejava.wallet.service.AccountServiceImp1;
 
 public class MainUI {
 	Scanner s = new Scanner(System.in);
@@ -43,12 +42,21 @@ public class MainUI {
 			case 1:
 				System.out.println("enter Id:");
 				int userId = s.nextInt();
+				boolean z=asi.isValidName(userId);
+				if(z) {
 				System.out.println("enter password:");
+				
 				String password = s.next();
+			
+				boolean z1=asi.isValidPassword(password);
+				if(z1) {
+				
 				System.out.println("enter name:");
 				String name = s.next();
 				int balance = 0;
 				adi.ScannerMap(userId, password, name, balance);
+				}
+				}
 				break;
 			case 2:
 				MainUI ui = new MainUI();

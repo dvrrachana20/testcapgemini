@@ -1,4 +1,4 @@
-package corejava.onlinewallet.OnlinePaymentWalletException;
+package com.capgemini.corejava.wallet.exception;
 
 public class WalletNoException extends Exception {
 

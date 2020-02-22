@@ -1,4 +1,4 @@
-package corejava.onlinewallet.OnlinePaymentWalletBean;
+package com.capgemini.corejava.wallet.model;
 
 public class Model {
 	private String password;

@@ -1,10 +1,10 @@
-package corejava.onlinewallet.OnlinePaymentWalletDAO;
+package com.capgemini.corejava.wallet.dao;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import corejava.onlinewallet.OnlinePaymentWalletBean.Model;
+import com.capgemini.corejava.wallet.model.*;
 
 public class AccountDaoImp1 implements AccountDao {
 	HashMap transactions = new HashMap<>();
@@ -60,10 +60,10 @@ public class AccountDaoImp1 implements AccountDao {
 		AccountDaoImp1 adi = new AccountDaoImp1();
 		Model a = adi.hashMap(userId);
 
-		System.out.println(userId);
+		//System.out.println(userId);
 
-		System.out.println(a.toString());
-		System.out.println(userId);
+		//System.out.println(a.toString());
+		//System.out.println(userId);
 
 		if (a.getPassword().equals(password))
 			return a;
@@ -78,7 +78,7 @@ public class AccountDaoImp1 implements AccountDao {
       double nb = a.getAccountBalance() + amount;
 		System.out.println("New balance=" + nb);
 
-		a.setAccountBalance(nb);
+	     a.setAccountBalance(nb);
 
 		transactions.replace(userId, nb);
 		return (int) nb;
